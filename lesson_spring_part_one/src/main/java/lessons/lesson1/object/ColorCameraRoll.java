@@ -1,4 +1,4 @@
-package lesson.lesson1.object;
+package lessons.lesson1.object;
 
 public class ColorCameraRoll implements CameraRoll{
     @Override

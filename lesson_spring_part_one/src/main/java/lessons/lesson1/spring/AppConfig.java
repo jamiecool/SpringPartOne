@@ -1,9 +1,9 @@
-package lesson.lesson1.spring;
+package lessons.lesson1.spring;
 
-import lesson.lesson1.object.Camera;
-import lesson.lesson1.object.CameraImpl;
-import lesson.lesson1.object.CameraRoll;
-import lesson.lesson1.object.ColorCameraRoll;
+import lessons.lesson1.object.Camera;
+import lessons.lesson1.object.CameraImpl;
+import lessons.lesson1.object.CameraRoll;
+import lessons.lesson1.object.ColorCameraRoll;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

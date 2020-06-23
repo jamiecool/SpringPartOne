@@ -8,6 +8,10 @@
     <artifactId>SpringPartOne</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
+    <modules>
+        <module>lesson_spring_part_one</module>
+        <module>homework_spring_part_one</module>
+    </modules>
 
     <properties>
         <project.buid.sourceEncoding>UTF-8</project.buid.sourceEncoding>

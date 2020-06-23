@@ -1,7 +1,7 @@
-package lesson.lesson1;
+package lessons.lesson1;
 
-import lesson.lesson1.object.Camera;
-import lesson.lesson1.spring.AppConfig;
+import lessons.lesson1.object.Camera;
+import lessons.lesson1.spring.AppConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
