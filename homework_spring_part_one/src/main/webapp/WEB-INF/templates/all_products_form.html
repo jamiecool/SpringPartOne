@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Info_All_products</title>
+</head>
+<body>
+
+<h1>Информация о всех продктах</h1>
+<p th:each="product : ${products}" th:text="'ID: ' + ${product.id} + ' NAME: ' +  ${product.name} + ' COST: ' + ${product.cost}" />
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Info_Product</title>
+</head>
+<body>
+
+<h1>Информация о продукте</h1>
+<p th:text="'ID: ' + ${product.id}"/>
+<br>
+<p th:text="'NAME: ' + ${product.name}"/>
+<br>
+<p th:text="'COST: ' + ${product.cost}"/>
+
+</body>
+</html>
