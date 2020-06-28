@@ -26,6 +26,18 @@ public class Product {
         return cost;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCost(float cost) {
+        this.cost = cost;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
