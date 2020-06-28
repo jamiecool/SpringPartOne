@@ -24,7 +24,7 @@
         <spring.version>5.2.7.RELEASE</spring.version>
     </properties>
 
-    <dependencies>
+    <!--<dependencies>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
@@ -63,7 +63,7 @@
             <artifactId>thymeleaf-spring5</artifactId>
             <version>3.0.10.RELEASE</version>
         </dependency>
-    </dependencies>
+    </dependencies>-->
 
     <build>
         <finalName>java-web-project</finalName>
