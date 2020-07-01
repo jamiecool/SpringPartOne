@@ -21,12 +21,12 @@ public class Main {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
         //Выводим товары которые купил покупатель
-        //System.out.println("Введите id покупателя: ");
-        //System.out.println("Покупатель купил товары: \n" + service.getListProductByCustomerId(Integer.parseInt(bf.readLine())));
+        System.out.println("Введите id покупателя: ");
+        System.out.println("Покупатель купил товары: \n" + service.getListProductByCustomerId(Integer.parseInt(bf.readLine())));
 
         //Выводим покупателей которые купили товар
-        //System.out.println("Введите id товара: ");
-        //System.out.println("Данный товар купили покупатели: \n" + service.getListCustomerByProductId(Integer.parseInt(bf.readLine())));
+        System.out.println("Введите id товара: ");
+        System.out.println("Данный товар купили покупатели: \n" + service.getListCustomerByProductId(Integer.parseInt(bf.readLine())));
 
 
         //Удаление товара у клиента
