@@ -21,13 +21,22 @@ public class Main {
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
         //Выводим товары которые купил покупатель
-        System.out.println("Введите id покупателя: ");
-        System.out.println("Покупатель купил товары: \n" + service.getListProductByCustomerId(Integer.parseInt(bf.readLine())));
+        //System.out.println("Введите id покупателя: ");
+        //System.out.println("Покупатель купил товары: \n" + service.getListProductByCustomerId(Integer.parseInt(bf.readLine())));
 
         //Выводим покупателей которые купили товар
-        System.out.println("Введите id товара: ");
-        System.out.println("Данный товар купили покупатели: \n" + service.getListCustomerByProductId(Integer.parseInt(bf.readLine())));
+        //System.out.println("Введите id товара: ");
+        //System.out.println("Данный товар купили покупатели: \n" + service.getListCustomerByProductId(Integer.parseInt(bf.readLine())));
 
+
+        //Удаление товара у клиента
+        System.out.println("Введите id покупателя у которого требуется удалние товара: ");
+        int i = Integer.parseInt(bf.readLine());
+        System.out.println("Покупатель купил товары: \n" + service.getListProductByCustomerId(i));
+        System.out.println("Введите id товара, который необходимо удалить у клиента с id = " + i + " : ");
+        service.deleteProductByCustomerId(i,Integer.parseInt(bf.readLine()));
+        System.out.println("Покупка у покупателя удалена");
+        System.out.println("У покупателя остались товары: \n" + service.getListProductByCustomerId(i));
 
         //Для отображения содерждимого в базе
         //printAllData();

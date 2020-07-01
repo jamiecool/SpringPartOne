@@ -10,7 +10,7 @@ public interface DAOService {
 
     List<Product> getListProduct();
 
-    void deleteProductByCustomerId(int id);
+    void deleteProductByCustomerId(int customer_id,int product_id);
 
     List<Customer> getListCustomerByProductId(int id);
 

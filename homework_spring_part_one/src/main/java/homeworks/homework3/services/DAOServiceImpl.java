@@ -24,7 +24,6 @@ public class DAOServiceImpl implements DAOService{
         commitTran();
     }
 
-
     private void beginTran(){
         em.getTransaction().begin();
     }
@@ -54,8 +53,21 @@ public class DAOServiceImpl implements DAOService{
     }
 
     @Override
-    public void deleteProductByCustomerId(int id) {
+    public void deleteProductByCustomerId(int customer_id,int product_id) {
+        beginTran();
+        //Получаем клиента
+        Customer customer = em.find(Customer.class,customer_id);
+        //получаем продукты клиента
+        List<Product> products = customer.getProducts();
 
+        for (Product p: products) {
+            if (p.getProduct_id() == product_id){
+                products.remove(p);
+                break;
+            }
+        }
+        em.merge(customer);
+        commitTran();
     }
 
     @Override
