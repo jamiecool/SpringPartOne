@@ -56,7 +56,7 @@ public class DAOServiceImpl implements DAOService{
     public void deleteProductByCustomerId(int customer_id,int product_id) {
         beginTran();
         //Получаем клиента
-        Customer customer = em.find(Customer.class,customer_id);
+        Customer customer = getCustomerById(customer_id);
         //получаем продукты клиента
         List<Product> products = customer.getProducts();
 
@@ -70,18 +70,22 @@ public class DAOServiceImpl implements DAOService{
         commitTran();
     }
 
+    private Customer getCustomerById(int customer_id) {
+        return em.find(Customer.class,customer_id);
+    }
+
     @Override
-    public List<Customer> getListCustomerByProductId(int id) {
+    public List<Customer> getListCustomerByProductId(int product_id) {
         beginTran();
-        List<Customer> customers = em.find(Product.class,id).getCustomers();
+        List<Customer> customers = em.find(Product.class, product_id).getCustomers();
         commitTran();
         return customers;
     }
 
     @Override
-    public List<Product> getListProductByCustomerId(int id) {
+    public List<Product> getListProductByCustomerId(int customer_id) {
         beginTran();
-        List<Product> products = em.find(Customer.class,id).getProducts();
+        List<Product> products = getCustomerById(customer_id).getProducts();
         commitTran();
         return products;
     }
