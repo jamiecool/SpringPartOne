@@ -33,6 +33,13 @@ public class Product {
         this.price = price;
     }
 
+
+    public Product(String product_name, float price, List<Customer> customers) {
+        this.product_name = product_name;
+        this.price = price;
+        this.customers = customers;
+    }
+
     public int getProduct_id() {
         return product_id;
     }
@@ -63,7 +70,6 @@ public class Product {
                 "product_id=" + product_id +
                 ", product_name='" + product_name + '\'' +
                 ", price=" + price +
-                ", customers=" + customers +
                 '}';
     }
 }

@@ -30,6 +30,11 @@ public class Customer {
         this.customer_name = customer_name;
     }
 
+    public Customer(String customer_name, List<Product> products) {
+        this.customer_name = customer_name;
+        this.products = products;
+    }
+
     public int getCustomer_id() {
         return customer_id;
     }
@@ -59,7 +64,6 @@ public class Customer {
         return "Customer{" +
                 "customer_id=" + customer_id +
                 ", customer_name='" + customer_name + '\'' +
-                ", products=" + products +
                 '}';
     }
 }

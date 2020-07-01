@@ -39,18 +39,16 @@ public class DAOServiceImpl implements DAOService{
 
     @Override
     public List<Customer> getListCustomer() {
-        List<Customer> customers = new ArrayList<>();
         beginTran();
-        customers = em.createQuery("select c from Customer c",Customer.class).getResultList();
+        List<Customer> customers = em.createQuery("select c from Customer c",Customer.class).getResultList();
         commitTran();
         return customers;
     }
 
     @Override
     public List<Product> getListProduct() {
-        List<Product> products = new ArrayList<>();
         beginTran();
-        products = em.createQuery("select p from Product p",Product.class).getResultList();
+        List<Product> products = em.createQuery("select p from Product p",Product.class).getResultList();
         commitTran();
         return products;
     }
@@ -62,12 +60,18 @@ public class DAOServiceImpl implements DAOService{
 
     @Override
     public List<Customer> getListCustomerByProductId(int id) {
-        return null;
+        beginTran();
+        List<Customer> customers = em.find(Product.class,id).getCustomers();
+        commitTran();
+        return customers;
     }
 
     @Override
     public List<Product> getListProductByCustomerId(int id) {
-        return null;
+        beginTran();
+        List<Product> products = em.find(Customer.class,id).getProducts();
+        commitTran();
+        return products;
     }
 
     @Override
@@ -80,8 +84,4 @@ public class DAOServiceImpl implements DAOService{
         addObjectToDB(product);
     }
 
-    @Override
-    public void customerBuyProduct() {
-
-    }
 }

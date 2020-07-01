@@ -20,5 +20,4 @@ public interface DAOService {
 
     void addProduct(Product product);
 
-    void customerBuyProduct();
 }
