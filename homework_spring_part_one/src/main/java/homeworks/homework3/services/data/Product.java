@@ -17,7 +17,7 @@ public class Product {
     @Column(name = "product_price")
     private float price;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "purchases",
             joinColumns = @JoinColumn(name = "product_id"),

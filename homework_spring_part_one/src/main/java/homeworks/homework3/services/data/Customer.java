@@ -4,21 +4,21 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "сustomer")
+@Table(name = "customer")
 public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "сustomer_id")
+    @Column(name = "customer_id")
     private int customer_id;
 
-    @Column(name = "сustomer_name")
+    @Column(name = "customer_name")
     private String customer_name;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "purchases",
-            joinColumns = @JoinColumn(name = "сustomer_id"),
+            joinColumns = @JoinColumn(name = "customer_id"),
             inverseJoinColumns = @JoinColumn(name = "product_id")
     )
     private List<Product> products;
@@ -62,6 +62,4 @@ public class Customer {
                 ", products=" + products +
                 '}';
     }
-
-
 }
