@@ -1,4 +1,4 @@
-package homeworks.homework2.product.data;
+package homeworks.homework2.product.dao.dataobjects;
 
 public class Product {
     private int id;

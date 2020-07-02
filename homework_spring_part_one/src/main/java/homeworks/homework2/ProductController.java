@@ -1,7 +1,7 @@
 package homeworks.homework2;
 
-import homeworks.homework2.product.ServiceProducts;
-import homeworks.homework2.product.data.Product;
+import homeworks.homework2.product.service.ServiceProducts;
+import homeworks.homework2.product.dao.dataobjects.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,6 +38,4 @@ public class ProductController {
         serviceProducts.addProduct(product);
         return "add_product";
     }
-
-
 }

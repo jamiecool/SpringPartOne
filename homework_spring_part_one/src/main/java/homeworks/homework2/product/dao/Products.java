@@ -1,6 +1,6 @@
-package homeworks.homework2.product;
+package homeworks.homework2.product.dao;
 
-import homeworks.homework2.product.data.Product;
+import homeworks.homework2.product.dao.dataobjects.Product;
 
 import java.util.List;
 
