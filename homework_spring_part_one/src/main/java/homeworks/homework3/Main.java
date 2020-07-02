@@ -1,9 +1,9 @@
 package homeworks.homework3;
 
-import homeworks.homework3.services.DAOService;
-import homeworks.homework3.services.DAOServiceImpl;
-import homeworks.homework3.services.data.Customer;
-import homeworks.homework3.services.data.Product;
+import homeworks.homework3.dao.DAOService;
+import homeworks.homework3.dao.DAOServiceImpl;
+import homeworks.homework3.dao.data_objects.Customer;
+import homeworks.homework3.dao.data_objects.Product;
 
 import java.io.BufferedReader;
 import java.io.IOException;

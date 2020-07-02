@@ -1,7 +1,7 @@
-package homeworks.homework3.services;
+package homeworks.homework3.dao;
 
-import homeworks.homework3.services.data.Customer;
-import homeworks.homework3.services.data.Product;
+import homeworks.homework3.dao.data_objects.Customer;
+import homeworks.homework3.dao.data_objects.Product;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package homeworks.homework3;
+package homeworks.homework3.dao.dao_connect;
 
 import org.hibernate.cfg.Configuration;
 

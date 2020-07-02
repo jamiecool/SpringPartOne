@@ -1,4 +1,4 @@
-package homeworks.homework3.services.data;
+package homeworks.homework3.dao.data_objects;
 
 import javax.persistence.*;
 import java.util.List;
