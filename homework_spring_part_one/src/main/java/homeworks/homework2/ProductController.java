@@ -1,6 +1,6 @@
 package homeworks.homework2;
 
-import homeworks.homework2.product.Products;
+import homeworks.homework2.product.ServiceProducts;
 import homeworks.homework2.product.data.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.*;
 public class ProductController {
 
     @Autowired
-    private Products products;
+    private ServiceProducts serviceProducts;
 
     @GetMapping(value = "/getProductById")
     public String getProductById(Model model, @RequestParam(name = "id") int id) {
-        model.addAttribute("product", products.getProductsById(id));
+        model.addAttribute("product", serviceProducts.getProductsById(id));
         return "product_form";
     }
 
     @GetMapping(value = "/allProduct")
     public String getAllProduct(Model model) {
-        model.addAttribute("products", products.getProductsAll());
+        model.addAttribute("products", serviceProducts.getProductsAll());
         return "all_products_form";
     }
 
@@ -35,7 +35,7 @@ public class ProductController {
 
     @PostMapping(value = "/addProduct")
     public String addProduct(Product product) {
-        products.addProduct(product);
+        serviceProducts.addProduct(product);
         return "add_product";
     }
 

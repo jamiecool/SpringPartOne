@@ -8,8 +8,8 @@ import java.util.List;
 
 @Repository
 public class ProductsImpl implements Products {
-
     private List<Product> products = new ArrayList<>();
+
 
     public ProductsImpl() {
         /*Тестовое наполнение данными*/
@@ -17,48 +17,11 @@ public class ProductsImpl implements Products {
         products.add(new Product(1,"monitor",22.5f));
     }
 
-    @Override
-    public List<Product> getProductsAll() {
+    public List<Product> getProducts() {
         return products;
     }
 
-    @Override
-    public Product getProductsById(int id) {
-        Product p = findProduct(id);
-
-        if (p == null) {
-            throw new RuntimeException("Товар отсутствует в списке товаров");
-        }
-
-        return p;
-    }
-
-
-    @Override
-    public void addProduct(Product product) {
-        if (findProduct(product.getId()) == null) {
-            products.add(product);
-        } else {
-            throw new RuntimeException("Такой товар уже есть в списке");
-        }
-    }
-
-    private Product findProduct(int id) {
-        for (Product p : products) {
-            if (p.getId() == id) {
-                return p;
-            }
-        }
-        return null;
-    }
-
-
-    public String print(){
-        String textProducts = null;
-        for (Product p : products) {
-            textProducts += p.toString() + "\n";
-        }
-
-        return textProducts;
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }
