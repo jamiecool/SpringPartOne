@@ -1,7 +1,7 @@
 package homeworks.homework2.product.service;
 
 import homeworks.homework2.product.dao.Products;
-import homeworks.homework2.product.dao.dataobjects.Product;
+import homeworks.homework2.product.dao.data_objects.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +12,7 @@ public class ServiceProductsImpl implements ServiceProducts {
 
     @Autowired
     private Products products;
+
     //private List<Product> products = new ArrayList<>();
 
     /*public ServiceProductsImpl() {

@@ -1,7 +1,7 @@
 package homeworks.homework2;
 
 import homeworks.homework2.product.service.ServiceProducts;
-import homeworks.homework2.product.dao.dataobjects.Product;
+import homeworks.homework2.product.dao.data_objects.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
