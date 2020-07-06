@@ -8,4 +8,5 @@ public interface ServiceProducts {
 
     List<Product> getProductsAll(boolean min, boolean max);
 
+    void addProduct(Product product);
 }
