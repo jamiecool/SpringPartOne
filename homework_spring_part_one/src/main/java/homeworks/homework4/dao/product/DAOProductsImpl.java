@@ -1,6 +1,5 @@
 package homeworks.homework4.dao.product;
 
-
 import homeworks.homework4.dao.connect.HibernateInitEntityManager;
 import homeworks.homework4.dao.objects.Product;
 import org.springframework.data.domain.Example;
@@ -10,19 +9,29 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 import java.util.Optional;
 
 @Repository
 public class DAOProductsImpl implements DAOProducts {
-    @PersistenceContext
-    private static final EntityManager em =  HibernateInitEntityManager.getEntityManager();
+
+    private static EntityManager em = HibernateInitEntityManager.getEntityManager();
 
     @Override
     public List<Product> findAll() {
-        return em.createQuery("select p from Product p",Product.class).getResultList();
+        return em.createQuery("select p from Product p", Product.class).getResultList();
     }
+
+    @Override
+    public List<Product> findAllMax() {
+        return em.createQuery("select p from Product p where p.price = (select max(p1.price) from Product p1)", Product.class).getResultList();
+    }
+
+    @Override
+    public List<Product> findAllMin() {
+        return em.createQuery("select p from Product p where p.price = (select min(p1.price) from Product p1)", Product.class).getResultList();
+    }
+
 
     @Override
     public List<Product> findAll(Sort sort) {
@@ -66,17 +75,17 @@ public class DAOProductsImpl implements DAOProducts {
 
     @Override
     public <S extends Product> S save(S entity) {
-        em.getTransaction().begin();
+        //em.getTransaction().begin();
         em.persist(entity);
-        em.getTransaction().commit();
+        //em.getTransaction().commit();
         return null;
     }
 
     @Override
     public <S extends Product> List<S> saveAll(Iterable<S> entities) {
-        em.getTransaction().begin();
+        //em.getTransaction().begin();
         em.persist(entities);
-        em.getTransaction().commit();
+        //em.getTransaction().commit();
         return null;
     }
 
