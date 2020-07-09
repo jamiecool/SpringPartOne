@@ -25,10 +25,10 @@ public class AppConfig {
         // Создаем источник данных
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         // Задаем параметры подключения к базе данных
-        dataSource.setUrl("jdbc:mysql://localhost:3306/geekbrains-lesson3");
-        dataSource.setUsername("geek");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/supermarket?serverTimezone=UTC");
+        dataSource.setUsername("root");
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setPassword("geek");
+        dataSource.setPassword("14855887");
         return dataSource;
     }
 
@@ -47,7 +47,7 @@ public class AppConfig {
         factory.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 
         // Указание пакета, в котором будут находиться классы-сущности
-        factory.setPackagesToScan("com.geekbrains");
+        factory.setPackagesToScan("lessons.lesson4");
 
         // Создание свойств для настройки Hibernate
         Properties jpaProperties = new Properties();
