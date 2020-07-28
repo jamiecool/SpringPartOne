@@ -8,7 +8,9 @@
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+  
+    <artifactId>home_work_lesson5</artifactId>
+  
     <groupId>com.geekbrains.july.market</groupId>
     <artifactId>july-market</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -68,4 +70,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
