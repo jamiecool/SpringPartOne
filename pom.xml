@@ -111,6 +111,7 @@
             <artifactId>jetty-webapp</artifactId>
             <version>9.4.30.v20200611</version>
         </dependency>
+
     </dependencies>
 
     <build>
